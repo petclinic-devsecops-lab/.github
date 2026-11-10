@@ -1,0 +1,33 @@
+name: Technical Spike
+description: Thử nghiệm kỹ thuật có giới hạn thời gian để giảm thiểu rủi ro và ra quyết định kiến trúc (ADR)
+title: "[Spike S0.<n>] "
+labels: ["type:spike"]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: Câu hỏi / Giả thuyết kỹ thuật (Hypothesis)
+      description: Rủi ro hoặc giả định nào cần được kiểm chứng bằng số đo thực tế?
+    validations:
+      required: true
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Các bước thử nghiệm (Experiment Steps)
+      description: Các bước thực hiện và công cụ đo đạc.
+    validations:
+      required: true
+  - type: textarea
+    id: threshold
+    attributes:
+      label: Ngưỡng đạt / Tiêu chí quyết định (Pass/Fail Criteria)
+      description: Ngưỡng định lượng để chấp nhận hoặc chuyển sang phương án dự phòng.
+    validations:
+      required: true
+  - type: input
+    id: adr
+    attributes:
+      label: ADR đầu ra (Output ADR)
+      placeholder: "docs/adr/0001-hypervisor-and-vbs.md"
+    validations:
+      required: false

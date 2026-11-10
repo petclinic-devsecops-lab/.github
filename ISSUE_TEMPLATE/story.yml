@@ -1,0 +1,48 @@
+name: Story / Task
+description: Hạng mục công việc kỹ thuật hoặc tính năng theo Sprint
+title: "[S<sprint>.<n>] "
+labels: ["type:story"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Điền đầy đủ bối cảnh, phạm vi và tiêu chí nghiệm thu có thể kiểm chứng được.
+  - type: textarea
+    id: goal
+    attributes:
+      label: Mục tiêu (Goal)
+      description: Hạng mục này giải quyết vấn đề gì trong kiến trúc hoặc luồng DevSecOps?
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Phạm vi thực hiện (Deliverables)
+      description: Các file, module, manifest hoặc pipeline cần tạo/sửa.
+    validations:
+      required: true
+  - type: textarea
+    id: ac
+    attributes:
+      label: Tiêu chí nghiệm thu (Acceptance Criteria)
+      description: Điều kiện bắt buộc để đóng issue (lệnh kiểm tra, kết quả mong đợi, bằng chứng).
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: dropdown
+    id: security_objective
+    attributes:
+      label: Mục tiêu bảo mật liên quan (Security Objective)
+      options:
+        - N/A
+        - SO-01 (No Secrets in Git)
+        - SO-02 (Signed Images Only)
+        - SO-03 (Least-Privilege Pods)
+        - SO-04 (Zero-Trust Network)
+        - SO-05 (Zero Fixable Critical/High CVEs)
+        - SO-06 (IaC & Manifest Compliance)
+        - SO-07 (Encrypted Backup & Restore Drill)
+        - SO-08 (Cloud IAM Least Privilege)
+    validations:
+      required: false

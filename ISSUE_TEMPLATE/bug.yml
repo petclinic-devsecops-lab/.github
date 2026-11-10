@@ -1,0 +1,23 @@
+name: Bug / Security Finding
+description: Lỗi hệ thống hoặc phát hiện bảo mật từ công cụ quét (gitleaks, Semgrep, Trivy, Checkov, ZAP)
+title: "[Bug] "
+labels: ["type:bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Mô tả lỗi / Phát hiện bảo mật
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Cách tái hiện / Bằng chứng (Log, SARIF, Command)
+    validations:
+      required: true
+  - type: textarea
+    id: fix
+    attributes:
+      label: Hướng xử lý đề xuất
+    validations:
+      required: false
